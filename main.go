@@ -10,7 +10,6 @@ func main(){
     var soma int
 
     fmt.Println("Digite 5 numeros inteiros:")
-
     for i := 0; i < 5; i++ {
         fmt.Println("Numero %d: ", i+1)
        fmt.Scan(&numeros[i])
