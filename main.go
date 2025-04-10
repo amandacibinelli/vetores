@@ -1,15 +1,22 @@
 package main
 
-import "fmt"
-func main(){
+import (
+	"fmt"
+)
 
-	
-    var nomes = []string{"amanda", "ana", "julia" , "carol" , "priscila"}
-    fmt.Println(nomes)
-     nomesOne := nomes [:2]
-     fmt.Println(nomesOne)
-     nomesTwo := nomes[3:]
-     fmt.Println(nomesTwo)
-     rangeOne := nomes[2]
-     fmt.Println(rangeOne)
+func main(){
+    
+    var numeros [5]int
+    var soma int
+
+    fmt.Println("Digite 5 numeros inteiros:")
+
+    for i := 0; i < 5; i++ {
+        fmt.Println("Numero %d: ", i+1)
+       fmt.Scan(&numeros[i])
+        soma += numeros[i]
+    }
+
+    fmt.Println("A soma dos números é: %d\n", soma)
+
 }
