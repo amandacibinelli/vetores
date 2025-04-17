@@ -4,29 +4,23 @@ import (
 	"fmt"
 
 )
-func dadosPessoa(nome string, idade int) (int, string) {
-	var status string
-	if idade >= 18 {
-		status = "Maior de idade"
-	} else {
-		status = "Menor de idade"
-	}
-	return idade, status
-}
 
 func main() {
-	var nome string
-	var idade int
+	alunoIdade := make(map[string]int)
+    alunoIdade["Bruno"] = 15
+    alunoIdade["Otavio"]= 16
+    alunoIdade["Fabiano"] = 40
+    alunoIdade["Isabela"] = 15
+    fmt.Println("Idade do Bruno", alunoIdade["Bruno"])
+    notasAlunos :=map[string]float64{
+        "Bruno" : 9.7,
+        "Otavio" :10,
+        "Fabiano":8.7,
+        "Isabela": 9.5,
 
-	fmt.Print("Digite o nome: ")
-	fmt.Scanln(&nome)
+    }
+    for k, v:= range notasAlunos {
+        fmt.Printf("%s tirou a nota % 1.f ", k ,v )
+    }
+  }
 
-	fmt.Print("Digite a idade: ")
-	fmt.Scanln(&idade)
-
-	idadeRetornada, status := dadosPessoa(nome, idade)
-
-	fmt.Printf("Nome: %s\n", nome)
-	fmt.Printf("Idade: %d\n", idadeRetornada)
-	fmt.Printf("Status: %s\n", status)
-}
