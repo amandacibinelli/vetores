@@ -4,19 +4,21 @@ import (
 	"fmt"
 
 )
-func analisarNotas(nota1, nota2 float64) (float64, string){
-	media := (nota1 + nota2) / 2
-
-	if media >= 6 {
-		return media, "Aprovado"
-} else
-     {
-
-		return media, "Reprovado"
-	}
-}
-
 func main(){
-	media, status := analisarNotas(7.5, 7.5)
-	fmt.Printf("Média: %.2f - Status: %s\n", media, status)
-}
+    estoque := map[string]int{
+        "COXINHA": 10,
+      "PÃO DE QUEIJO": 15,
+      "REFRIGERANTE": 20,
+        }
+        fmt.Println("Estoque:")
+        for produto, quantidade := range estoque {
+          fmt.Printf("%s: %d\n", produto, quantidade)
+        }
+        estoque["COXINHA"] -= 2
+        estoque["PÃO DE QUEIJO"] -= 1
+      
+        fmt.Println("Estoque atualizado:")
+        for produto, quantidade := range estoque {
+          fmt.Printf("%s: %d\n", produto, quantidade)
+        }
+      }
